@@ -20,8 +20,8 @@
 ## Contratos  de los servicios
 
 ### OpenAPI 3.0 (Swagger)  
-  - calculator  [Servicio de cálculos](https://app.swaggerhub.com/apis/test_jg_sf/calculator-service/1.0.0  )  
- - sum  [Servicio de suma](https://app.swaggerhub.com/apis-docs/test_jg_sf/sum-service/1.0.0  )  
+  - calculator  [Servicio de cálculos](https://app.swaggerhub.com/apis-docs/test_jg_sf/calculator-service/1.0.0)  
+ - sum  [Servicio de suma](https://app.swaggerhub.com/apis-docs/test_jg_sf/sum-service/1.0.0)  
 - subtraction  [Servicio de resta](https://app.swaggerhub.com/apis-docs/test_jg_sf/subtraction-service/1.0.0)  
 - multiplication  [Servicio de multiplicación](https://app.swaggerhub.com/apis-docs/test_jg_sf/multiplication-service/1.0.0  )  
 - division  [Servicio de division](https://app.swaggerhub.com/apis-docs/test_jg_sf/division-service/1.0.0  ) 
