@@ -4,7 +4,7 @@
 [Ejercicio](https://github.com/JosephCastro/Katas/blob/master/Calculadora.md)
   
 ## ¿Cómo ejecutar?
-### Configuración en 1 min. (Requisito tener instalado Docker)
+### Configuración en 1 min. (Requisito tener instalado Docker) (1 min con buen internet :stuck_out_tongue_winking_eye:)
 1) Clonar el proyecto de setup desde el siguiente enlace: [Setup](https://github.com/testJgSf/project-setup) con:
  
 >      git clone https://github.com/testJgSf/project-setup
