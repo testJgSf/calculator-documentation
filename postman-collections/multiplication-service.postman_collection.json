@@ -1,0 +1,31 @@
+{
+	"variables": [],
+	"info": {
+		"name": "multiplication-service",
+		"_postman_id": "6e3c0519-7f34-2780-84f7-b960e891289d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "multiply",
+			"request": {
+				"url": "http://localhost:3001/multiply",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"factors\": [1,2,3]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

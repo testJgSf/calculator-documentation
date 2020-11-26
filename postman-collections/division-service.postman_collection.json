@@ -1,0 +1,31 @@
+{
+	"variables": [],
+	"info": {
+		"name": "division-service",
+		"_postman_id": "cee26764-d4ff-6287-8c6e-967dd32b3b91",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "divide",
+			"request": {
+				"url": "http://localhost:3004/divide",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"factors\": [1,2,-3.5]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

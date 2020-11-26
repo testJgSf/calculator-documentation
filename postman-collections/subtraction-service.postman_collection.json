@@ -1,0 +1,31 @@
+{
+	"variables": [],
+	"info": {
+		"name": "subtraction-service",
+		"_postman_id": "aa52621e-b100-a88f-6deb-3c7d96c5ddda",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "subtract",
+			"request": {
+				"url": "http://localhost:3001/multiply",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"factors\": [1,2,3]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

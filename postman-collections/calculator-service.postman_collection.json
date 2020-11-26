@@ -1,0 +1,31 @@
+{
+	"variables": [],
+	"info": {
+		"name": "calculator-service",
+		"_postman_id": "2e6bcd09-55fb-1f7e-6e72-77f345bea6d7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "calculate",
+			"request": {
+				"url": "http://localhost:3000/calculate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"operations\": [\"3 x 4 + 4 - 1\",\"1 + 2 + 3 + 4\",\"3 / 3 + 3 - 3\"]\n}\n\n\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+    calculator-service:
+        image: joseg/calculator-service-1.0.0
+        ports:
+         - "3000:3000"
+    multiplication-service:
+        image: joseg/multiplication-service-1.0.0
+        ports:
+         - "3001:3001"
+    sum-service:
+        image: joseg/sum-service-1.0.0
+        ports:
+         - "3002:3002"
+    subtraction-service:
+        image: joseg/subtraction-service-1.0.0
+        ports:
+         - "3003:3003"
+    division-service:
+        image: joseg/division-service-1.0.0
+        ports:
+         - "3004:3004"
