@@ -43,7 +43,9 @@ El proyecto está compuesto por 5 microservicios, 4 de operaciones básicas (=,-
   
 ![Solution](https://github.com/testJgSf/calculator-documentation/blob/develop/diagrams/calculatorSolutionDesign.png?raw=true)
   
-
+### Pruebas de integración
+[Pruebas Integracion Postman](https://github.com/testJgSf/calculator-documentation/tree/develop/integrations-tests)  
+  
    
 ### Más información  
 Cualquier información extra contacte a José Gabriel Ortiz.
