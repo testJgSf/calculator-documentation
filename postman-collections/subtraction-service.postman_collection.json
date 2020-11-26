@@ -10,7 +10,7 @@
 		{
 			"name": "subtract",
 			"request": {
-				"url": "http://localhost:3001/multiply",
+				"url": "http://localhost:3003/subtract",
 				"method": "POST",
 				"header": [
 					{
