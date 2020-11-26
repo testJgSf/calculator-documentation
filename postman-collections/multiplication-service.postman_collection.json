@@ -8,24 +8,56 @@
 	},
 	"item": [
 		{
-			"name": "multiply",
-			"request": {
-				"url": "http://localhost:3001/multiply",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
+			"name": "local",
+			"description": "",
+			"item": [
+				{
+					"name": "multiply",
+					"request": {
+						"url": "http://localhost:3001/multiply",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,2,3]\n}"
+						},
 						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"factors\": [1,2,3]\n}"
-				},
-				"description": ""
-			},
-			"response": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cloud",
+			"description": "",
+			"item": [
+				{
+					"name": "multiply",
+					"request": {
+						"url": "https://mul-service-dot-test-sf-jg.uc.r.appspot.com/multiply",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,2,3]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

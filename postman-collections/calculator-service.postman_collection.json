@@ -8,24 +8,56 @@
 	},
 	"item": [
 		{
-			"name": "calculate",
-			"request": {
-				"url": "http://localhost:3000/calculate",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
+			"name": "local",
+			"description": "",
+			"item": [
+				{
+					"name": "calculate",
+					"request": {
+						"url": "http://localhost:3000/calculate",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"operations\": [\"3 x 4 + 4 - 1\",\"1 + 2 + 3 + 4\",\"3 / 3 + 3 - 3\"]\n}\n\n\n"
+						},
 						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"operations\": [\"3 x 4 + 4 - 1\",\"1 + 2 + 3 + 4\",\"3 / 3 + 3 - 3\"]\n}\n\n\n"
-				},
-				"description": ""
-			},
-			"response": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cloud",
+			"description": "",
+			"item": [
+				{
+					"name": "calculate",
+					"request": {
+						"url": "https://calculator-service-dot-test-sf-jg.uc.r.appspot.com/calculate",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"operations\": [\"1+1\"]\n}\n\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

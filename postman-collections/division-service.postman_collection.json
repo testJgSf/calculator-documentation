@@ -8,24 +8,56 @@
 	},
 	"item": [
 		{
-			"name": "divide",
-			"request": {
-				"url": "http://localhost:3004/divide",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
+			"name": "local",
+			"description": "",
+			"item": [
+				{
+					"name": "divide",
+					"request": {
+						"url": "http://localhost:3004/divide",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,2,-3.5]\n}"
+						},
 						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"factors\": [1,2,-3.5]\n}"
-				},
-				"description": ""
-			},
-			"response": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cloud",
+			"description": "",
+			"item": [
+				{
+					"name": "divide",
+					"request": {
+						"url": "https://div-service-dot-test-sf-jg.uc.r.appspot.com/divide",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,2,-3.5]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
