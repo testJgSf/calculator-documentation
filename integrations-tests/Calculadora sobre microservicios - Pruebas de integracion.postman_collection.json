@@ -1,0 +1,450 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Calculadora sobre microservicios - Pruebas de integracion",
+		"_postman_id": "c0b6de89-0102-60fe-f006-c11a32b866fe",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Expected Ok",
+			"description": "",
+			"item": [
+				{
+					"name": "divide",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Result is right\"] = responseJson.result === -0.14286;",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3004/divide",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,2,-3.5]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "multiply",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Result is right\"] = responseJson.result === 6;",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3001/multiply",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,2,3]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "sum",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Result is right\"] = responseJson.result === -0.5;",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3002/sum",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,2,-3.5]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "subtract",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Result is right\"] = responseJson.result === -4;",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3003/subtract",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,2,3]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "calculate ",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Should return a 200 code\"] = responseJson.code === 200;",
+									"tests[\"Should return all expected responses\"] = responseJson.results.length === 3;",
+									"tests[\"First result should be 3x4+4-1=15\"] = responseJson.results[0] === \"3x4+4-1=15\";",
+									"tests[\"Second result should be 1+2+3+4=10\"] = responseJson.results[1] === \"1+2+3+4=10\";",
+									"tests[\"Third result should be 3/3+3-3=1\"] = responseJson.results[2] === \"3/3+3-3=1\";",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3000/calculate",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"operations\": [\"3 x 4 + 4 - 1\",\"1 + 2 + 3 + 4\",\"3 / 3 + 3 - 3\"]\n}\n\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "calculate not all fullfilled",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Should return a 200 code\"] = responseJson.code === 200;",
+									"tests[\"Should return all expected responses\"] = responseJson.results.length === 2;",
+									"tests[\"First result should be 3x4+4-1=15\"] = responseJson.results[0] === \"3x4+4-1=15\";",
+									"tests[\"Second result should be 1+2+3+4=10\"] = responseJson.results[1] === \"1+2+3+4=10\";",
+									"",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3000/calculate",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"operations\": [\"3 x 4 + 4 - 1\",\"1 + 2 + 3 + 4\",\"0/0\"]\n}\n\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Expected Bad Request",
+			"description": "",
+			"item": [
+				{
+					"name": "divide ",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Message references to error\"] = responseJson.message === \"Check errors for details\";",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3004/divide",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [0,0]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "divide  character",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Message references to error\"] = responseJson.message === \"Check errors for details\";",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3004/divide",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [\"a\",0]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "multiply",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Message references to error\"] = responseJson.message === \"Check errors for details\";",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3001/multiply",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,2,\"A\"]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "sum",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Message references to error\"] = responseJson.message === \"Check errors for details\";",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3002/sum",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [1,\"A\",-3.5]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "subtract",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Message references to error\"] = responseJson.message === \"Check errors for details\";",
+									"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3003/subtract",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"factors\": [\"a\",2,3]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "calculate  all operations invalid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 400\"] = responseCode.code === 400;",
+									"let responseJson = JSON.parse(responseBody);",
+									"tests[\"Message references to error\"] = responseJson.message === \"Check errors for details\";",
+									"",
+									"",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://localhost:3000/calculate",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"operations\": [\"*3 x 4 + 4 - 1\",\"/1 + 2 + 3 + 4\",\"SA3 / 3 + 3 - 3\"]\n}\n\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
