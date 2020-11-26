@@ -17,6 +17,10 @@
 - Se require tener instalado nodeJs v12.13.0  
 - Ingresar a los [componentes](#componentes) y seguir las instrucciones de su readme de forma individual.
     
+    
+## Ubicación del docker-compose
+
+- El archivo docker-compose indicado en el planteamiento se encuentra en la siguiente ruta: [docker-compose](https://github.com/testJgSf/project-setup/blob/develop/docker-compose.yml)     
 ## Contratos  de los servicios
 
 ### OpenAPI 3.0 (Swagger)  
@@ -59,7 +63,6 @@ actions, el deploy es hecho a servicios de GCP. A continuación el estado de cad
 
 ### Pruebas de integración
 [Pruebas Integracion Postman](https://github.com/testJgSf/calculator-documentation/tree/develop/integrations-tests)  
-  
    
 ### Más información  
 Cualquier información extra contacte a José Gabriel Ortiz.
